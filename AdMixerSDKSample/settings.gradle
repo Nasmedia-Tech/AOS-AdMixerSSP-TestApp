@@ -11,12 +11,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url "https://s01.oss.sonatype.org/service/local/repositories/iogithubnasmedia-tech-1395/content"
-        }
-        maven {
-            url "https://s01.oss.sonatype.org/service/local/repositories/iogithubnasmedia-tech-1397/content"
-        }
+
     }
 }
 rootProject.name = "AdMixerSDKSample"
