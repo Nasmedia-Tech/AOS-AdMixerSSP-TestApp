@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             tvMenu.setOnClickListener(v -> {
                         switch (getAdapterPosition()) {
                             case 0: {
+
                                 context.startActivity(new Intent(context, BannerActivity.class));
                                 break;
                             }

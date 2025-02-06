@@ -60,7 +60,7 @@ public class RewardInterstitialVideoActivity extends AppCompatActivity {
             @Override
             public void onFailedToReceiveAd(Object o, String s, int i, String s1) {
                 // 광고 수신 실패
-                Toast.makeText(RewardInterstitialVideoActivity.this, s, Toast.LENGTH_SHORT).show();
+                Toast.makeText(RewardInterstitialVideoActivity.this, "onFailedToReceiveAd", Toast.LENGTH_SHORT).show();
             }
 
             @Override
