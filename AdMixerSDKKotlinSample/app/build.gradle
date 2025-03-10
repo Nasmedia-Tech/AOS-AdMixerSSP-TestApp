@@ -47,7 +47,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 	//Admixer SDK
 
-    implementation 'io.github.nasmedia-tech:admixer-ssp:1.0.6'
-    implementation 'io.github.nasmedia-tech:admixer-admanager:1.0.3'
+    implementation 'io.github.nasmedia-tech:admixer-ssp:1.0.7'
+    implementation 'io.github.nasmedia-tech:admixer-admanager:1.0.5'
     implementation 'com.google.android.gms:play-services-ads:22.6.0'
 }
