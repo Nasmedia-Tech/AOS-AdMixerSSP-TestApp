@@ -77,13 +77,21 @@ public class NativeActivity extends AppCompatActivity {
         });
         AdInfo.Builder builder = new AdInfo.Builder(Application.ADUNIT_ID_NATIVE) // AdMixer 플랫폼에서 발급받은 배너 ADUNIT_ID
                 .isRetry(false);
-        builder.setNativeLayoutAdInfo(AdMixer.ADAPTER_ADMOB, R.layout.item_320x480);
-        builder.setIconImageId(AdMixer.ADAPTER_ADMOB, R.id.iv_icon);
-        builder.setTitleId(AdMixer.ADAPTER_ADMOB, R.id.tv_title);
-        builder.setAdvertiserId(AdMixer.ADAPTER_ADMOB, R.id.tv_adv);
-        builder.setDescriptionId(AdMixer.ADAPTER_ADMOB, R.id.tv_desc);
-        builder.setMainViewId(AdMixer.ADAPTER_ADMOB, R.id.iv_main);
-        builder.setCtaId(AdMixer.ADAPTER_ADMOB, R.id.btn_cta);
+        builder.setNativeLayoutAdInfo(AdMixer.ADAPTER_ADMANAGER, R.layout.item_320x480);
+        builder.setIconImageId(AdMixer.ADAPTER_ADMANAGER, R.id.iv_icon);
+        builder.setTitleId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_title);
+        builder.setAdvertiserId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_adv);
+        builder.setDescriptionId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_desc);
+        builder.setMainViewId(AdMixer.ADAPTER_ADMANAGER, R.id.iv_main);
+        builder.setCtaId(AdMixer.ADAPTER_ADMANAGER, R.id.btn_cta);
+
+        builder.setNativeLayoutAdInfo(AdMixer.ADAPTER_ADFIT, R.layout.item_320x480);
+        builder.setIconImageId(AdMixer.ADAPTER_ADFIT, R.id.iv_icon);
+        builder.setTitleId(AdMixer.ADAPTER_ADFIT, R.id.tv_title);
+        builder.setAdvertiserId(AdMixer.ADAPTER_ADFIT, R.id.tv_adv);
+        builder.setDescriptionId(AdMixer.ADAPTER_ADFIT, R.id.tv_desc);
+        builder.setMainViewId(AdMixer.ADAPTER_ADFIT, R.id.iv_main);
+        builder.setCtaId(AdMixer.ADAPTER_ADFIT, R.id.btn_cta);
 
         builder.setIsUseMediation(true);// 미디에이션 사용 여부 (true - 기본값, false - 미사용)
         AdInfo adInfo = builder.build();

@@ -36,5 +36,6 @@ public class Application extends android.app.Application {
         // XXXX_ADUNIT_ID 는 Admixer 사이트 미디어 > 미디어관리 > 미디어 등록에서 발급받은 Adunit ID 입니다.
         AdMixer.getInstance().initialize(this, MEDIA_KEY, adUnits);
         AdMixer.registerAdapter(AdMixer.ADAPTER_ADMOB);
+        AdMixer.registerAdapter(AdMixer.ADAPTER_ADFIT);
     }
 }

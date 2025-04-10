@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.nasmedia.admixer.sample"
         minSdk 21
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -30,6 +30,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    namespace 'com.nasmedia.admixer.sample'
 }
 
 dependencies {
@@ -41,7 +42,8 @@ dependencies {
 //    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
 
     //Admixer SDK
-    implementation 'io.github.nasmedia-tech:admixer-ssp:1.0.7'
-    implementation 'io.github.nasmedia-tech:admixer-admanager:1.0.5'
-    implementation 'com.google.android.gms:play-services-ads:22.6.0'
+    implementation 'io.github.nasmedia-tech:admixer-ssp:1.0.8'
+    implementation 'io.github.nasmedia-tech:admixer-admanager:1.0.6'
+    implementation 'io.github.nasmedia-tech:admixer-adfit:1.0.3'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
 }

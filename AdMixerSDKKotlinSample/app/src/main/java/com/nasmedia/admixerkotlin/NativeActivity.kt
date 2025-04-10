@@ -24,13 +24,21 @@ class NativeActivity : AppCompatActivity() {
 
         val adInfo: AdInfo =
             AdInfo.Builder(Application.ADUNIT_ID_NATIVE) // AdMixer 플랫폼에서 발급받은 배너 ADUNIT_ID
-                .setNativeLayoutAdInfo(AdMixer.ADAPTER_ADMOB, R.layout.item_320x480)
-                .setIconImageId(AdMixer.ADAPTER_ADMOB, R.id.iv_icon)
-                .setTitleId(AdMixer.ADAPTER_ADMOB, R.id.tv_title)
-                .setAdvertiserId(AdMixer.ADAPTER_ADMOB, R.id.tv_adv)
-                .setDescriptionId(AdMixer.ADAPTER_ADMOB, R.id.tv_desc)
-                .setMainViewId(AdMixer.ADAPTER_ADMOB, R.id.iv_main)
-                .setCtaId(AdMixer.ADAPTER_ADMOB, R.id.btn_cta)
+                .setNativeLayoutAdInfo(AdMixer.ADAPTER_ADMANAGER, R.layout.item_320x480)
+                .setIconImageId(AdMixer.ADAPTER_ADMANAGER, R.id.iv_icon)
+                .setTitleId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_title)
+                .setAdvertiserId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_adv)
+                .setDescriptionId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_desc)
+                .setMainViewId(AdMixer.ADAPTER_ADMANAGER, R.id.iv_main)
+                .setCtaId(AdMixer.ADAPTER_ADMANAGER, R.id.btn_cta)
+
+                .setNativeLayoutAdInfo(AdMixer.ADAPTER_ADFIT, R.layout.item_320x480)
+                .setIconImageId(AdMixer.ADAPTER_ADFIT, R.id.iv_icon)
+                .setTitleId(AdMixer.ADAPTER_ADFIT, R.id.tv_title)
+                .setAdvertiserId(AdMixer.ADAPTER_ADFIT, R.id.tv_adv)
+                .setDescriptionId(AdMixer.ADAPTER_ADFIT, R.id.tv_desc)
+                .setMainViewId(AdMixer.ADAPTER_ADFIT, R.id.iv_main)
+                .setCtaId(AdMixer.ADAPTER_ADFIT, R.id.btn_cta)
                 .setIsUseMediation(true) // 미디에이션 사용 여부 (true - 기본값, false - 미사용)
                 .build()
 
