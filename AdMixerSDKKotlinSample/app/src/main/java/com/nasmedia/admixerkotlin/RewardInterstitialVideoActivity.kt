@@ -81,6 +81,7 @@ class RewardInterstitialVideoActivity : AppCompatActivity() {
     // 생명주기에 따라 아래 설정이 반드시 필요합니다.
     override fun onDestroy() {
         if (rewardInterstitialVideoAd != null) {
+            rewardInterstitialVideoAd!!.setListener(null)
             rewardInterstitialVideoAd!!.stopRewardVideoAd()
             rewardInterstitialVideoAd = null
         }

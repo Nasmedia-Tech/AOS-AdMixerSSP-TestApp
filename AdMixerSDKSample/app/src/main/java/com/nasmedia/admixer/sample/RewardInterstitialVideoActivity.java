@@ -37,8 +37,6 @@ public class RewardInterstitialVideoActivity extends AppCompatActivity {
         params.put("phone", "010-1111-1111");
 
         AdInfo adInfo = new AdInfo.Builder(Application.ADUNIT_ID_REWARD_INTERSTITIAL_VIDEO) // AdMixer 플랫폼에서 발급받은 리워드 전면 비디오 ADUNIT_ID
-                .interstitialTimeout(0) // 초단위로 전면 광고 타임아웃 설정 (기본값 : 0, 0 이면 서버지정 시간으로 처리, 서버지정 시간 : 20s)
-                .maxRetryCountInSlot(-1) // 리로드 시간 내에 반복 횟수(-1 : 무한, 0 : 반복 없음, n : n번 반복)
                 .setCustomParams(params) // Reward Callback 커스텀데이터 Map형태로 추가 (선택사항)
                 .setIsUseMediation(true) // 미디에이션 사용 여부 (true - 기본값, false - 미사용)
                 .build();
@@ -97,6 +95,7 @@ public class RewardInterstitialVideoActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         if (rewardInterstitialVideoAd != null) {
+            rewardInterstitialVideoAd.setListener(null);
             rewardInterstitialVideoAd.stopRewardVideoAd();
             rewardInterstitialVideoAd = null;
         }
