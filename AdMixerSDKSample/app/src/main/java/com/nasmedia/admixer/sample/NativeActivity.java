@@ -17,6 +17,9 @@ import com.nasmedia.admixerssp.ads.NativeAdView;
 import com.nasmedia.admixerssp.common.AdMixer;
 import com.nasmedia.admixerssp.common.nativeads.NativeAdViewBinder;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class NativeActivity extends AppCompatActivity {
 
     private NativeAdView nativeAdView;
@@ -75,23 +78,24 @@ public class NativeActivity extends AppCompatActivity {
             }
 
         });
+        Map<String, Integer> adViewIds = new HashMap<>();
+        adViewIds.put("nativeLayout", R.layout.item_320x480);
+        adViewIds.put("iv_icon", R.id.iv_icon);
+        adViewIds.put("tv_title", R.id.tv_title);
+        adViewIds.put("tv_adv", R.id.tv_adv);
+        adViewIds.put("tv_desc", R.id.tv_desc);
+        adViewIds.put("iv_main", R.id.iv_main);
+        adViewIds.put("btn_cta", R.id.btn_cta);
+        adViewIds.put(AdMixer.ADAPTER_MOBWITH_IMAGE,R.id.imageView_ad);
+
         AdInfo.Builder builder = new AdInfo.Builder(Application.ADUNIT_ID_NATIVE) // AdMixer 플랫폼에서 발급받은 배너 ADUNIT_ID
                 .isRetry(false);
-        builder.setNativeLayoutAdInfo(AdMixer.ADAPTER_ADMANAGER, R.layout.item_320x480);
-        builder.setIconImageId(AdMixer.ADAPTER_ADMANAGER, R.id.iv_icon);
-        builder.setTitleId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_title);
-        builder.setAdvertiserId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_adv);
-        builder.setDescriptionId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_desc);
-        builder.setMainViewId(AdMixer.ADAPTER_ADMANAGER, R.id.iv_main);
-        builder.setCtaId(AdMixer.ADAPTER_ADMANAGER, R.id.btn_cta);
 
-        builder.setNativeLayoutAdInfo(AdMixer.ADAPTER_ADFIT, R.layout.item_320x480);
-        builder.setIconImageId(AdMixer.ADAPTER_ADFIT, R.id.iv_icon);
-        builder.setTitleId(AdMixer.ADAPTER_ADFIT, R.id.tv_title);
-        builder.setAdvertiserId(AdMixer.ADAPTER_ADFIT, R.id.tv_adv);
-        builder.setDescriptionId(AdMixer.ADAPTER_ADFIT, R.id.tv_desc);
-        builder.setMainViewId(AdMixer.ADAPTER_ADFIT, R.id.iv_main);
-        builder.setCtaId(AdMixer.ADAPTER_ADFIT, R.id.btn_cta);
+
+        builder.setViewIds(AdMixer.ADAPTER_ADMANAGER, adViewIds);
+        builder.setViewIds(AdMixer.ADAPTER_MOBWITH, adViewIds);
+        builder.setViewIds(AdMixer.ADAPTER_ADFIT, adViewIds);
+        builder.setViewIds(AdMixer.ADAPTER_PANGLE, adViewIds);
 
         builder.setIsUseMediation(true);// 미디에이션 사용 여부 (true - 기본값, false - 미사용)
         AdInfo adInfo = builder.build();

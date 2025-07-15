@@ -45,5 +45,7 @@ dependencies {
     implementation 'io.github.nasmedia-tech:admixer-ssp:1.0.10'
     implementation 'io.github.nasmedia-tech:admixer-admanager:1.0.7'
     implementation 'io.github.nasmedia-tech:admixer-adfit:1.0.4'
+    implementation 'io.github.nasmedia-tech:admixer-mobwith:1.0.2'
     implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+
 }

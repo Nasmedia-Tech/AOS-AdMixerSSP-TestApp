@@ -37,3 +37,5 @@
 -keep class com.nasmedia.admixerssp.** { *; }
 # Mediation Adfit Setting
 -keep class com.nasmedia.adfit.** { *; }
+# mobwith Setting
+-keep class com.nasmedia.mobwith.** { *; }

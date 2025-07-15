@@ -37,5 +37,6 @@ public class Application extends android.app.Application {
         AdMixer.getInstance().initialize(this, MEDIA_KEY, adUnits);
         AdMixer.registerAdapter(AdMixer.ADAPTER_ADMOB);
         AdMixer.registerAdapter(AdMixer.ADAPTER_ADFIT);
+        AdMixer.registerAdapter(AdMixer.ADAPTER_MOBWITH);
     }
 }

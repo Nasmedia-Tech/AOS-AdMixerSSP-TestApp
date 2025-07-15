@@ -22,23 +22,23 @@ class NativeActivity : AppCompatActivity() {
 
         container = findViewById(R.id.container_native)
 
+
+        val adViewIds: MutableMap<String, Int> = HashMap()
+        adViewIds["nativeLayout"] = R.layout.item_320x480
+        adViewIds["iv_icon"] = R.id.iv_icon
+        adViewIds["tv_title"] = R.id.tv_title
+        adViewIds["tv_adv"] = R.id.tv_adv
+        adViewIds["tv_desc"] = R.id.tv_desc
+        adViewIds["iv_main"] = R.id.iv_main
+        adViewIds["btn_cta"] = R.id.btn_cta
+        adViewIds[AdMixer.ADAPTER_MOBWITH_IMAGE] = R.id.imageView_ad
+
         val adInfo: AdInfo =
             AdInfo.Builder(Application.ADUNIT_ID_NATIVE) // AdMixer 플랫폼에서 발급받은 배너 ADUNIT_ID
-                .setNativeLayoutAdInfo(AdMixer.ADAPTER_ADMANAGER, R.layout.item_320x480)
-                .setIconImageId(AdMixer.ADAPTER_ADMANAGER, R.id.iv_icon)
-                .setTitleId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_title)
-                .setAdvertiserId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_adv)
-                .setDescriptionId(AdMixer.ADAPTER_ADMANAGER, R.id.tv_desc)
-                .setMainViewId(AdMixer.ADAPTER_ADMANAGER, R.id.iv_main)
-                .setCtaId(AdMixer.ADAPTER_ADMANAGER, R.id.btn_cta)
-
-                .setNativeLayoutAdInfo(AdMixer.ADAPTER_ADFIT, R.layout.item_320x480)
-                .setIconImageId(AdMixer.ADAPTER_ADFIT, R.id.iv_icon)
-                .setTitleId(AdMixer.ADAPTER_ADFIT, R.id.tv_title)
-                .setAdvertiserId(AdMixer.ADAPTER_ADFIT, R.id.tv_adv)
-                .setDescriptionId(AdMixer.ADAPTER_ADFIT, R.id.tv_desc)
-                .setMainViewId(AdMixer.ADAPTER_ADFIT, R.id.iv_main)
-                .setCtaId(AdMixer.ADAPTER_ADFIT, R.id.btn_cta)
+                .setViewIds(AdMixer.ADAPTER_ADMANAGER, adViewIds)
+                .setViewIds(AdMixer.ADAPTER_MOBWITH, adViewIds)
+                .setViewIds(AdMixer.ADAPTER_ADFIT, adViewIds)
+                .setViewIds(AdMixer.ADAPTER_PANGLE, adViewIds)
                 .setIsUseMediation(true) // 미디에이션 사용 여부 (true - 기본값, false - 미사용)
                 .build()
 
