@@ -39,3 +39,5 @@
 -keep class com.nasmedia.adfit.** { *; }
 # mobwith Setting
 -keep class com.nasmedia.mobwith.** { *; }
+
+-keep class com.nasmedia.pangle.** { *; }

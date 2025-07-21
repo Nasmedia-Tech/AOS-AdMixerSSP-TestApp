@@ -35,8 +35,9 @@ public class Application extends android.app.Application {
         // adunits 파라미터는 앱 내에서 사용할 모든 adunit_id 를 배열 형태로 넘겨 주셔야 합니다.
         // XXXX_ADUNIT_ID 는 Admixer 사이트 미디어 > 미디어관리 > 미디어 등록에서 발급받은 Adunit ID 입니다.
         AdMixer.getInstance().initialize(this, MEDIA_KEY, adUnits);
-        AdMixer.registerAdapter(AdMixer.ADAPTER_ADMOB);
+        AdMixer.registerAdapter(AdMixer.ADAPTER_ADMANAGER);
         AdMixer.registerAdapter(AdMixer.ADAPTER_ADFIT);
         AdMixer.registerAdapter(AdMixer.ADAPTER_MOBWITH);
+        AdMixer.registerAdapter(AdMixer.ADAPTER_PANGLE);
     }
 }
