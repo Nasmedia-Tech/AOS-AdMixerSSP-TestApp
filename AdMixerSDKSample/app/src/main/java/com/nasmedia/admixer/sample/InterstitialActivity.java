@@ -41,14 +41,14 @@ public class InterstitialActivity extends AppCompatActivity {
         adConfig.setButtonRight("오른쪽버튼", null);
         // 버튼영역 색상지정
         adConfig.setButtonFrameColor(null);
+        //adConfig.setCountDown(0, 5);//countType 0이면 게이지모드 1이면 텍스트모드 countType time 2~5초
 
         AdInfo adInfo = new AdInfo.Builder(Application.ADUNIT_ID_INTERSTITIAL_BANNER) // AdMixer 플랫폼에서 발급받은 전면 배너 ADUNIT_ID
-                .interstitialTimeout(0)  // 초단위로 전면 광고 타임아웃 설정 (기본값 : 0, 0 이면 서버지정 시간으로 처리, 서버지정 시간 : 20s)
-                .maxRetryCountInSlot(-1) // 리로드 시간 내에 반복 횟수(-1 : 무한, 0 : 반복 없음, n : n번 반복)
                 .isUseBackgroundAlpha(true) // 반투명처리 여부 (true: 반투명, false: 처리안함) / 기본값 : true
                 .popupAdOption(adConfig) // [팝업형 전면광고] 사용 시 설정
                 .setIsUseMediation(true) // 미디에이션 사용 여부 (true - 기본값, false - 미사용)
-                .interstitialAdType(AdInfo.InterstitialAdType.Popup) // (default : AdInfo.InterstitialAdType.Basic)
+                .interstitialAdType(AdInfo.InterstitialAdType.Popup) // Basic, Popup, CountDown (default : AdInfo.InterstitialAdType.Basic)
+                //.setBound(100) //Close버튼 클릭 범위20~100 (default :100)
                 .build();
 
         interstitialAd = new InterstitialAd(this);
