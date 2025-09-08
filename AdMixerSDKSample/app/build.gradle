@@ -50,6 +50,6 @@ dependencies {
     implementation "com.pangle.global:pag-sdk:7.1.0.4"
 //    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.14'
     implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
-    implementation 'io.github.nasmedia-tech:admixer-applovin:1.0.1'
+    implementation 'io.github.nasmedia-tech:admixer-applovin:1.0.2'
 
 }

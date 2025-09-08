@@ -56,7 +56,7 @@ dependencies {
     implementation 'io.github.nasmedia-tech:admixer-mobwith:1.0.2'
     implementation 'io.github.nasmedia-tech:admixer-pangle:1.0.1'
     implementation "com.pangle.global:pag-sdk:7.1.0.4"
-    implementation 'io.github.nasmedia-tech:admixer-applovin:1.0.1'
+    implementation 'io.github.nasmedia-tech:admixer-applovin:1.0.2'
 
     implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
 
