@@ -41,3 +41,5 @@
 -keep class com.nasmedia.mobwith.** { *; }
 
 -keep class com.nasmedia.pangle.** { *; }
+
+-keep class com.nasmedia.applovin.** { *; }
