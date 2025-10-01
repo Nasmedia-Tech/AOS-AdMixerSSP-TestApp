@@ -50,13 +50,13 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     //Admixer SDK
 
-    implementation 'io.github.nasmedia-tech:admixer-ssp:1.0.13'
-    implementation 'io.github.nasmedia-tech:admixer-admanager:1.0.7'
-    implementation 'io.github.nasmedia-tech:admixer-adfit:1.0.4'
-    implementation 'io.github.nasmedia-tech:admixer-mobwith:1.0.2'
+    implementation 'io.github.nasmedia-tech:admixer-ssp:1.0.14'
+    implementation 'io.github.nasmedia-tech:admixer-admanager:1.0.8'
+    implementation 'io.github.nasmedia-tech:admixer-adfit:1.0.6'
+    implementation 'io.github.nasmedia-tech:admixer-mobwith:1.0.4'
     implementation 'io.github.nasmedia-tech:admixer-pangle:1.0.1'
     implementation "com.pangle.global:pag-sdk:7.1.0.4"
-    implementation 'io.github.nasmedia-tech:admixer-applovin:1.0.2'
+    implementation 'io.github.nasmedia-tech:admixer-applovin:1.0.3'
 
     implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
 
