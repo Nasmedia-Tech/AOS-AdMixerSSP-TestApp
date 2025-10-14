@@ -38,7 +38,7 @@ public class Banner2Activity extends AppCompatActivity {
             @Override
             public void onFailedToReceiveAd(Object o, String s, int i, String s1) {
                 // 광고 수신 실패
-                Toast.makeText(Banner2Activity.this, s, Toast.LENGTH_SHORT).show();
+                Toast.makeText(Banner2Activity.this, s.toString(), Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onEventAd(Object o, AdEvent adEvent) {

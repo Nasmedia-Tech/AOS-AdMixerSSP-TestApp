@@ -9,6 +9,7 @@ import java.util.Arrays;
 public class Application extends android.app.Application {
 
     public static String MEDIA_KEY = "AdMixer 플랫폼에서 발급받은 미디어 키";
+
     public static String ADUNIT_ID_BANNER = "AdMixer 플랫폼에서 발급받은 배너 ADUNIT_ID";
     public static String ADUNIT_ID_INTERSTITIAL_BANNER = "AdMixer 플랫폼에서 발급받은 전면 배너 ADUNIT_ID";
     public static String ADUNIT_ID_NATIVE = "AdMixer 플랫폼에서 발급받은 네이티브 ADUNIT_ID";
