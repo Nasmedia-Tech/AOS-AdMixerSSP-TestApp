@@ -41,5 +41,6 @@ public class Application extends android.app.Application {
         AdMixer.registerAdapter(AdMixer.ADAPTER_MOBWITH);
         AdMixer.registerAdapter(AdMixer.ADAPTER_PANGLE);
         AdMixer.registerAdapter(AdMixer.ADAPTER_APPLOVIN);
+        AdMixer.registerAdapter(AdMixer.ADAPTER_UNITY);
     }
 }
